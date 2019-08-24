@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".presentation.main.LoginFragment">
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guid1"
+            app:layout_constraintGuide_percent="0.45"
+            android:layout_height="wrap_content"/>
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guid2"
+            app:layout_constraintGuide_percent="0.55"
+            android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="0dp"
+              app:layout_constraintWidth_percent="0.85"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:id="@+id/username"
+              android:paddingStart="10dp"
+              android:hint="@string/mobile"
+              android:drawablePadding="15dp"
+              android:drawableStart="@drawable/mail"
+              app:layout_constraintTop_toBottomOf="@+id/guid1"
+              android:background="@drawable/user_rounded_back"
+              android:layout_height="50dp"/>
+
+    <EditText android:layout_width="0dp"
+              app:layout_constraintWidth_percent="0.85"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:id="@+id/password"
+              android:paddingStart="10dp"
+              android:hint="@string/password"
+              android:drawablePadding="15dp"
+              android:drawableStart="@drawable/pass"
+              android:inputType="textPassword"
+              app:layout_constraintTop_toBottomOf="@+id/guid2"
+              android:background="@drawable/user_rounded_back"
+              android:layout_height="50dp"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/forget"
+              android:id="@+id/forget"
+              android:layout_marginTop="8dp"
+              app:layout_constraintTop_toBottomOf="@+id/password"
+              app:layout_constraintEnd_toEndOf="@+id/password"
+    />
+
+
+    <TextView android:layout_width="0dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginBottom="15dp"
+              android:background="@drawable/user_back"
+              app:layout_constraintHeight_percent="0.07"
+              app:layout_constraintWidth_percent="0.85"
+              app:layout_constraintTop_toBottomOf="@+id/forget"
+              app:layout_constraintBottom_toTopOf="@+id/account"
+              android:textSize="18dp"
+              android:textColor="@color/white"
+              android:gravity="center"
+              android:id="@+id/login"
+              android:text="LOGIN "
+              android:layout_height="0dp"/>
+
+
+    <TextView android:layout_width="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginBottom="15dp"
+              android:textSize="18dp"
+              android:id="@+id/account"
+              android:text="Don't have account ? "
+              android:layout_height="wrap_content"/>
+
+
+    <TextView android:layout_width="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:layout_marginBottom="15dp"
+              android:textColor="@color/orange"
+              android:textSize="20dp"
+              android:text="Register"
+              app:layout_constraintStart_toEndOf="@+id/account"
+              android:layout_height="wrap_content"/>
+
+    <android.support.constraint.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/login_rounded_back"
+            app:layout_constraintHeight_percent=".35"
+            android:layout_height="0dp">
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="100dp"
+                       android:id="@+id/logo"
+                        app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:src="@drawable/logo"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30sp"
+                android:text="Login"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <FrameLayout
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/orange"
+                android:backgroundTint="@color/orange"
+                android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
